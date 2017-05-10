@@ -1,0 +1,12 @@
+[submodule "iFrame"]
+  path = modules/iFrame
+  url = https://github.com/desertblade/iFrame.git
+[submodule "MMM-SimpleLogo"]
+  path = modules/MMM-SimpleLogo
+  url = https://github.com/frdteknikelektro/MMM-SimpleLogo.git
+[submodule "MMM-Slack"]
+  path = modules/MMM-Slack
+  url = https://github.com/nrkno/MMM-Slack.git
+[submodule "MMM-YrNow"]
+  path = modules/MMM-YrNow
+  url = https://github.com/YR/MMM-YrNow.git
