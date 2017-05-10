@@ -172,7 +172,7 @@ Module.register("MMM-Calendar", {
 
 			var titleWrapper = document.createElement("td"),
 				repeatingCountTitle = "";
-			
+
 			var locationWrapper = document.createElement("td");
 
 			if (this.config.displayRepeatingCountTitle) {
@@ -458,7 +458,7 @@ Module.register("MMM-Calendar", {
 			  needle = new RegExp(regParts[1], regParts[2]);
 			}
 
-			title = title.replace(needle, replacement);
+			//title = title.replace(needle, replacement);
 		}
 
 		title = this.shorten(title, this.config.maxTitleLength);

@@ -105,20 +105,26 @@ var CalendarFetcher = function(url, reloadInterval, maximumEntries, maximumNumbe
 					if (event.start.length === 8) {
 						startDate = startDate.startOf("day");
 					}
+					//console.log("Event: ",event.attendee);
+					//var className = (typeof event.attendee.val!== "undefined") ? event.attendee.val : event.attendee[0].val;
+					var title = "Event";
+					var location = event.location || '';
+					var geo = event.geo || false;
+					var description = event.description || false;
 
-					var className = (typeof event.attendee.val!== "undefined") ? event.attendee.val : event.attendee[0].val;
 					if (event.attendee) {
-						className = (typeof event.attendee.val!== "undefined") ? event.attendee.val : event.attendee[0].val;
+						var className = (typeof event.attendee.val!== "undefined") ? event.attendee.val : event.attendee[0].val;
 						className = className.substring(0, className.indexOf('\"'));
-						title = className.replace(campus, '')
+						title = className.replace(campus, '');
 						title = title.trim();
+						location = event.location.replace('Rom:','') || false;
+						geo = event.geo || false;
+						description = event.description.replace('\n*','').trim() || false;
+					} else if (event.summary) {
+						title = (typeof event.summary.val !== "undefined") ? event.summary.val : event.summary;
 					} else if(event.description) {
 						title = event.description;
 					}
-
-					var location = event.location.replace('Rom:','') || false;
-					var geo = event.geo || false;
-					var description = event.description.replace('\n*','').trim() || false;
 
 					if (typeof event.rrule != "undefined" && !isFacebookBirthday) {
 						var rule = event.rrule;

@@ -25,7 +25,7 @@ var config = {
         module: 'MMM-SimpleLogo',
         position: 'top_left',   // This can be any of the regions.
         config: {
-            fileUrl: 'images/noroff-logo.jpg',
+            fileUrl: 'https://www.noroff.no/images/logo/noroff-logo.png',
 						width: '300px',
 						position: 'center'
         }
@@ -40,6 +40,8 @@ var config = {
 			position: 'top_left',
 			config: {
 				colored: true,
+				maximumEntries: '20',
+				fadePoint: '0.75',
 				calendars: [
 					{
 						symbol: 'graduation-cap',
@@ -55,6 +57,22 @@ var config = {
 				]
 			}
 		},
+		{
+		module: "currentweather",
+		position: "top_right",	// This can be any of the regions.
+									// Best results in left or right regions.
+		config: {
+			// See 'Configuration options' for more information.
+			location: "Stavanger,Norway",
+			locationID: "3137115", //Location ID from http://openweathermap.org/help/city_list.txt
+			appid: "bd8653f3e555d5b93e2b8e47b79cc9e6",//"0aacf7f239f2f295d57004ff8832c3d9" //openweathermap.org API key.
+			degreeLabel: true,
+			units: 'metric',
+			showWindDirectionAsArrow: true,
+			showHumidity: true,
+			showIndoorTemperature: true
+		}
+	},
 		{
 			module: 'MMM-YrNow',
 			position: 'top_right',
