@@ -25,7 +25,7 @@ var config = {
         module: 'MMM-SimpleLogo',
         position: 'top_left',   // This can be any of the regions.
         config: {
-            fileUrl: 'modules/MMM-SimpleLogo/public/noroff-logo.jpg',
+            fileUrl: 'images/noroff-logo.jpg',
 						width: '300px',
 						position: 'center'
         }
